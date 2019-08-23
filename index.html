@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Game of Thrones Hangman</title>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+
+</head>
+
+<body>
+    <div class="heading">
+        <h1>Game of Thrones Hangman</h1>
+        <h4>Press play to hear the introduction music!</h4>
+                <audio controls>
+
+                <source src="assets/images/Game of Thrones.mp3" autoplay="autoplay" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+           
+    
+
+    </div>
+    </div>
+
+    <div class="background">
+        <div class="container">
+
+            <h2>To start, press any letter.</h2>
+            <div>
+                <h3 id="currentword">_ _ _ _ _ _</h3>
+            </div>
+
+            <div id="scoreboard">
+                <div class="sidebar">
+                    <h3>Guesses Left: <span id="guessesremaining"></span></h3>
+                </div>
+                <div class="sidebar">
+                    <h3>WINS: <span id="winstracker"></span></h3>
+                </div>
+
+                <div class="sidebar">
+                    <h3>LOSSES: <span id="losstracker"></span></h3>
+                </div>
+
+                <div class="sidebar">
+                    <h3>INCORRECT LETTERS: <span id="playerguesses"></span></h3>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    
+    <script src="assets/javascript/game.js"></script>
+
+</body>
+
+</html>

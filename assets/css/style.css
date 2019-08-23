@@ -1,0 +1,95 @@
+body {
+    background-image: url("../images/GoT.jpg");
+    background-size: cover;
+    
+}
+
+h1 {
+    font-size: 43px;
+    background: transparent;
+    text-align: center;
+    margin-top: 2%;
+    margin-left: 10%;
+    margin-right:10%;
+    padding: 15px;
+    font-family: 'Faster One', cursive;
+    color: white;
+}
+h4 {
+    font-size: 20px;    
+    background: transparent;
+    text-align: center;    
+    margin-left: 10%;
+    margin-right:10%;
+    padding: 15px;
+    font-family: 'Faster One', cursive;
+    color: white;
+}
+
+.heading {
+    margin: 0;
+    text-align: center;
+    margin-top: 2%;
+    margin-left: 10%;
+    margin-right:10%;
+    display: auto;
+
+}
+
+
+h2 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 20px;
+    padding-top: 10px;
+}
+
+
+img {
+    margin: 10px;
+}
+
+
+.sidebar {
+    padding: 5px;
+    position: relative;
+    
+    margin-bottom: 5px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 12px;
+}
+
+span {
+    
+    padding-left: 3px;
+    padding-right:3px;
+    background-color: blue; 
+    font-size: 15px;
+}
+
+
+
+.container {
+    background-color:transparent;
+    margin-top: 5px;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 5px;
+    text-align: center;
+    
+    color: white;
+    
+}
+
+#currentword {
+    font-size: 30px;
+    font-family: cursive;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+#scoreboard {
+    padding: 20px;
+}
+
+
+  
