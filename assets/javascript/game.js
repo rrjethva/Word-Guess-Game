@@ -15,13 +15,6 @@ var guessesRemaining = 9;
 
 
 
-// ALL FUNCTIONS
-//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-
-//__________________________________________________________
-//GAME START FUNCTION
-//__________________________________________________________
 function Game() {
     //computer generates random word from words array
     randomWord = words[Math.floor(Math.random() * words.length)];
@@ -42,52 +35,6 @@ function Game() {
 
    
 }
-
-
-
-
-// function aud() {
-
-//     if (randomWord === words[0]) {
-
-//         document.getElementById("image").src = "./assets/images/arya.jpg";
-//     }
-
-//     else if (randomWord === words[1]) {
-
-//         document.getElementById("image").src = "./assets/images/cersei.jpg";
-//     }
-//     //Simpsons Audio & Image
-//     //---------------------------
-//     else if (randomWord === words[2]) {
-     
-//         document.getElementById("image").src = "./assets/images/drogon.jpg";
-//     }
-//     //Scooby-doo Audio & Image
-//     //---------------------------
-//     else if (randomWord === words[3]) {
-    
-//         document.getElementById("image").src = "./assets/images/hodor.jpg";
-//     }
-//     //Spongebob Audio & Image
-//     //---------------------------
-//     else if (randomWord === words[4]) {
-     
-//         document.getElementById("image").src = "./assets/images/jonsnow.jpg";
-//     }
-//     //Danny Audio & Image
-//     //---------------------------
-//     else if (randomWord === words[5]) {
-      
-//         document.getElementById("image").src = "./assets/images/nightking.jpg";
-//     }
-//     //Teen Titans Audio & Image
-//     //---------------------------
-//     else if (randomWord === words[6]) {
-    
-//         document.getElementById("image").src = "./assets/images/tyrion.jpg";
-//     }
-// };
 
 //__________________________________________________________
 //RESET FUNCTION
@@ -126,7 +73,7 @@ function checkLetters(letter) {
         wrongGuess.push(letter);
         guessesRemaining--;
     }
-    console.log(blanksAndCorrect);
+   
 }
 
 //__________________________________________________________
