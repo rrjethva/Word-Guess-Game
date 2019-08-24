@@ -1,7 +1,7 @@
-var words = ["drogon", "night king", "arya stark", "hodor", "tyrion", "jon snow", "cersei"]
+var words = ["drogon", "nightking", "aryastark", "hodor", "tyrion", "jonsnow", "cersei"]
 
 var randomWord = "";
-var lettersOfWord = []
+var lettersOfWord = [];
 var blanks = 0;
 var blanksAndCorrect = [];
 var wrongGuess = [];
@@ -18,6 +18,7 @@ function Game() {
     blanks = lettersOfWord.length;
     for (var i = 0; i < blanks; i++) {
         blanksAndCorrect.push("_");
+        console.log(blanksAndCorrect);
     }
     document.getElementById("currentword").innerHTML = "  " + blanksAndCorrect.join("  ");
 }
@@ -68,7 +69,7 @@ function reset() {
 function checkLetters(letter) {
     var letterInWord = false;
     for (var i = 0; i < blanks; i++) {
-        if (randomWord[i] == letter) {
+        if (randomWord[i] === letter) {
             letterInWord = true;
         }
     }
@@ -76,15 +77,17 @@ function checkLetters(letter) {
     if (letterInWord) {
 
         for (var i = 0; i < blanks; i++) {
-            if (randomWord[i] == letter) {
+            if (randomWord[i] === letter) {
                 blanksAndCorrect[i] = letter;
             }
         }
     }
 
-    else {
+    else (randomWord[i] !==letter); {
         wrongGuess.push(letter);
         guessesRemaining--;
+
+        //create code to store wrong guesses and check true or false and if false, place in wrong, if true don't repeat
     }
 
 }
@@ -95,17 +98,17 @@ function complete() {
 
     if (lettersOfWord.toString() == blanksAndCorrect.toString()) {
         wins++;
-        img()
-        reset()
+        img();
+        reset();
         document.getElementById("winstracker").innerHTML = " " + wins;
     }
     else if (guessesRemaining === 0) {
         losses++;
-        reset()
+        reset();
         document.getElementById("image").src = "assets/images/youlose.png"
         document.getElementById("losstracker").innerHTML = " " + losses;
     }
-   1
+    1
     document.getElementById("currentword").innerHTML = "  " + blanksAndCorrect.join(" ");
     document.getElementById("guessesremaining").innerHTML = " " + guessesRemaining;
 }
@@ -114,11 +117,11 @@ Game()
 
 document.onkeyup = function (event) {
     var guesses = String.fromCharCode(event.keyCode).toLowerCase();
- 
+
     checkLetters(guesses);
-    
+
     complete();
-    
+
     document.getElementById("playerguesses").innerHTML = "  " + wrongGuess.join(" ");
 }
 
