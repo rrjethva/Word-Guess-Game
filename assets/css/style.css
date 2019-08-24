@@ -64,8 +64,8 @@ img {
 }
 
 span {    
-    padding-left: 3px;
-    padding-right:3px;
+    padding-left: 10px;
+    padding-right:10px;
     background-color: blue; 
     font-size: 15px;
 }

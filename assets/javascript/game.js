@@ -5,7 +5,6 @@ var lettersOfWord = [];
 var blanks = 0;
 var blanksAndCorrect = [];
 var wrongGuess = [];
-
 var wins = 0;
 var losses = 0;
 var guessesRemaining = 9;
@@ -29,29 +28,17 @@ function img() {
 
     if (randomWord === words[0]) {
         document.getElementById("image").src = "assets/images/drogon.jpg";
-    }
-
-    else if (randomWord === words[1]) {
+    } else if (randomWord === words[1]) {
         document.getElementById("image").src = "assets/images/nightking.jpg";
-    }
-
-    else if (randomWord === words[2]) {
+    } else if (randomWord === words[2]) {
         document.getElementById("image").src = "assets/images/arya.jpg";
-    }
-
-    else if (randomWord === words[3]) {
+    } else if (randomWord === words[3]) {
         document.getElementById("image").src = "assets/images/hodor.jpg";
-    }
-
-    else if (randomWord === words[4]) {
+    } else if (randomWord === words[4]) {
         document.getElementById("image").src = "assets/images/tyrion.jpg";
-    }
-
-    else if (randomWord === words[5]) {
+    } else if (randomWord === words[5]) {
         document.getElementById("image").src = "assets/images/jonsnow.jpg";
-    }
-
-    else if (randomWord === words[6]) {
+    } else if (randomWord === words[6]) {
         document.getElementById("image").src = "assets/images/cersei.jpg";
     }
 };
@@ -81,9 +68,7 @@ function checkLetters(letter) {
                 blanksAndCorrect[i] = letter;
             }
         }
-    }
-
-    else (randomWord[i] !==letter); {
+    } else(randomWord[i] !== letter); {
         wrongGuess.push(letter);
         guessesRemaining--;
 
@@ -101,8 +86,7 @@ function complete() {
         img();
         reset();
         document.getElementById("winstracker").innerHTML = " " + wins;
-    }
-    else if (guessesRemaining === 0) {
+    } else if (guessesRemaining === 0) {
         losses++;
         reset();
         document.getElementById("image").src = "assets/images/youlose.png"
@@ -124,4 +108,3 @@ document.onkeyup = function (event) {
 
     document.getElementById("playerguesses").innerHTML = "  " + wrongGuess.join(" ");
 }
-
